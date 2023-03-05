@@ -1,0 +1,186 @@
+body {
+  background-color: aqua;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  background-color: blue;
+  height: min-content;
+  /* padding: 10px; */
+}
+
+.child-1 {
+  background-color: rgb(3, 185, 3);
+  visibility: visible;
+}
+.child-2 {
+  background-color: crimson;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  /* padding: 10px; */
+  height: min-content;
+}
+
+.navbar {
+  background-color: rgb(2, 80, 2);
+  color: white;
+}
+
+.content {
+  background-color: rgb(255, 238, 0);
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  /* padding: 10px; */
+  column-gap: 10px;
+  height: 150vh;
+}
+
+.main {
+  background-color: rgb(50, 3, 94);
+  display: grid;
+  grid-template-rows: 320px 1fr;
+  row-gap: 10px;
+  /* padding: 10px; */
+}
+
+.sidebar {
+  background-color: rgb(75, 44, 4);
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+  row-gap: 10px;
+  /* padding: 10px; */
+}
+
+.landing {
+  background-color: cadetblue;
+}
+
+.explore {
+  padding: 10px;
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+}
+.explore h2{
+  margin-block: 10px;
+}
+.panels{
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 10px;
+
+}
+.items{
+  background: grey;
+  padding: 8px 12px;
+  border-radius: 20px;
+  min-width: 10px;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  width: 100%;
+}
+.card{
+  background-color: #262D3A;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 12px;
+}
+.card-img{
+position: relative;
+}
+.card-img-cover{
+  width: 100%;
+}
+.icons{
+display: flex;
+justify-content: space-between;
+width: 92%;
+position: absolute;
+top: 0;
+margin: 10px;
+}
+.icon-2{
+  width: 12%;
+  height: 12%;
+}
+.card-img-base{
+  position:absolute ;
+  z-index: 20;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.card-info{
+  padding-inline: 5px;
+}
+.price{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.card-info h3{
+  margin-top: 0;
+}
+hr{
+  margin-bottom: 15px;
+}
+
+
+.top-artist {
+  background-color: cyan;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.ele1,
+.ele2,
+.ele3 {
+  width: 100%;
+  min-height: 50px;
+  background-color: black;
+}
+
+.recent-activity {
+  background-color: darkgoldenrod;
+}
+#open,
+#close {
+  display: none;
+}
+
+@media (width<=1000px) {
+  .content {
+    grid-template-columns: 1fr;
+    height: 200vh;
+  }
+}
+@media (width<=700px) {
+  .parent {
+    grid-template-columns: 1fr;
+  }
+  .child-1 {
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+  #open,
+  #close {
+    display: inline;
+  }
+}
